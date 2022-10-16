@@ -14,14 +14,13 @@ function App() {
   const [month, setMonth] = useState('');
   const [year, setYear] = useState('');
   const [cvv, setCvv] = useState('');
-  
 
   return (
     <Box className="App" maxW='100%' margin={'auto'}>
       <FormContext.Provider value={{ cardName, cardNumber, month, year, cvv, setCardName, setCardNumber, setMonth, setYear, setCvv }} >
       <Flex justifyContent={'space-around'} alignItems='center' flexWrap={'wrap'}>
           <Card />
-          <Form />
+          <Form /> 
       </Flex>
       </FormContext.Provider>
     </Box>
