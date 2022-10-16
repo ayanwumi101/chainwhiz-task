@@ -26,11 +26,11 @@ const Form = () => {
             if (checkCardNum(month) === false){
               if (checkCardNum(year) === false){
                   setValidDate(false)
-              }
+              }else{setValidDate(true)}
                 setValidDate(false)
-            }
+            }else{setValidDate(true)}
             setValidCvv(false)
-          }
+          }else{setValidCvv(true)}
           setValidNum(false);
         }else{
           setValidNum(true)
@@ -52,7 +52,7 @@ const Form = () => {
 
   return (
     <>
-      { showMessage ? <Message setShowMessage={setShowMessage} setError={setError} /> : <Box maxW={{base: '280px', md: '320px', lg: '350px'}} >
+      { showMessage ? <Message setShowMessage={setShowMessage} setError={setError} setFilled={setFilled} setValidCvv={setValidCvv} setValidDate={setValidDate} setValidNum={setValidNum} /> : <Box maxW={{base: '280px', md: '320px', lg: '350px'}} >
         <FormControl mb='5' isRequired>
 
          <Box mb='5'>

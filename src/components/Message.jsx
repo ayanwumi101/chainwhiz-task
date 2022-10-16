@@ -4,8 +4,8 @@ import iconComplete from '../assets/icon-complete.svg'
 import { FormContext } from '../App'
 
 
-const Message = ({setShowMessage, setError}) => {
-  const { setCardName, setCardNumber, setMonth, setYear, setCvv } = useContext(FormContext)
+const Message = ({setShowMessage, setError, setValidDate, setValidNum, setValidCvv}) => {
+  const { setCardName, setCardNumber, setMonth, setYear, setCvv, setFilled } = useContext(FormContext)
   const handleClick = () => {
     setCardName('');
     setCardNumber('');
@@ -13,7 +13,11 @@ const Message = ({setShowMessage, setError}) => {
     setMonth('');
     setYear('');
     setError(false);
-    setShowMessage(false)
+    setShowMessage(false);
+    setFilled(false);
+    setValidCvv(false);
+    setValidDate(false);
+    setValidNum(false);
   }
   return (
     <Stack spacing={7} maxW={{ base: '300px', md: '320px', lg: '380px' }} textAlign={'center'}>
