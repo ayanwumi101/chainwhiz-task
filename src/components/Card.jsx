@@ -9,7 +9,7 @@ const Card = () => {
   const {cardName, cardNumber, cvv, month, year} = useContext(FormContext);
   return (
     <Flex flexDirection={{base: 'column-reverse', md: 'column', lg: 'column'}} maxW={'400px'}>
-      <Box maxW='400px' position={'relative'} top={{ base: '-40px' }} zIndex={{base: '1'}} >
+      <Box maxW='400px' position={'relative'} top={{ base: '-40px' }} zIndex={{base: '1'}} left={{base: '-10px',}} >
 
         <Box position={'absolute'} top={{base: '15px', lg: '25px'}} left={{base: '15px', md: '15px', lg: '30px'}}>
           <Image src={cardLogo} mb={{base: 5, lg: 9}} maxW={{base: '20%', md: '70%', lg: '100%'}} />
@@ -23,7 +23,7 @@ const Card = () => {
         <Image src={cardBgFront} maxW={{ base: '270px', md: '350px', lg: '400px' }} />
       </Box>
 
-      <Box position={'relative'} left={{ base: '0px', md: '15px', lg: '30px' }} top={{base: '20px'}}>
+      <Box position={'relative'} left={{ base: '15px', md: '15px', lg: '80px' }} top={{base: '20px'}}>
           <Text position={'absolute'} top={{base: '60px', lg: '95px'}} right='13%' color='white'>{cvv ? cvv : '123'}</Text>
           <Image src={cardBgBack} maxW={{base: '270px', md: '350px', lg: '400px'}} />
       </Box>
