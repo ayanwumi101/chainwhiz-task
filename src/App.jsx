@@ -18,7 +18,7 @@ function App() {
   return (
     <Box className="App" maxW='100%' margin={'auto'}>
       <FormContext.Provider value={{ cardName, cardNumber, month, year, cvv, setCardName, setCardNumber, setMonth, setYear, setCvv }} >
-      <Flex justifyContent={'space-around'} alignItems='center' flexWrap={'wrap'}>
+      <Flex justifyContent={'space-around'} alignItems='center' flexWrap={'wrap'} mt={{base: 0, lg: 9}}>
           <Card />
           <Form /> 
       </Flex>
